@@ -1,0 +1,14 @@
+{
+  "description": "When we request an airport that is not listed (Lisbon airport does not seem to be listed) ",
+  "url": "https://aviationapi.com/airport-info?apt=LPPT",
+  "icao": "LPPT",
+  "apiResponse": "{\"LPPT\":[]}",
+  "expectedCode": 200,
+  "expectedBody": {
+    "name": "Unavailable",
+    "icao": "LPPT",
+    "iata": null,
+    "type": null,
+    "city": null
+  }
+}

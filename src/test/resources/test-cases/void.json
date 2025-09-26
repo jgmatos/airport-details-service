@@ -1,0 +1,8 @@
+{
+  "description": "When we request an airport that is not listed",
+  "url": "https://aviationapi.com/airport-info?apt=",
+  "icao": "",
+  "apiResponse": "{\"status\":\"error\",\"status_code\":\"404\",\"message\":\"You must search for at least one airport.\"}",
+  "expectedCode": 404,
+  "expectedBody": null
+}

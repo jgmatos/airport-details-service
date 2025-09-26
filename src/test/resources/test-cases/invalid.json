@@ -1,0 +1,8 @@
+{
+  "description": "When we request an airport that is not listed",
+  "url": "https://aviationapi.com/airport-info?apt=dummy",
+  "icao": "dummy",
+  "apiResponse": "{\"DUMMY\":[]}",
+  "expectedCode": 400,
+  "expectedBody": null
+}

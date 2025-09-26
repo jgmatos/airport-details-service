@@ -1,0 +1,36 @@
+server:
+  port: 7007
+
+spring:
+  cache:
+    type: caffeine
+  application:
+    name: airport-details-service
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,metrics,prometheus
+  metrics:
+    enable:
+      all: true
+
+aviationapi:
+  base-url: "https://api.aviationapi.com/v1"
+  timeout-seconds: 3
+  retries: 2
+  backoff-millis: 200
+  max-backoff-millis: 2000
+
+cache:
+  name: airports
+  max-size: 500
+  expire-hours: 24
+
+resilience:
+  name: "airportService"
+  failure-rate: 50
+  wait-seconds: 30
+  window: 10
+
